@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">WordAssistant</string>
+    <string name="daily_recommend">每日推荐</string>
+    <string name="search">搜索</string>
+    <string name="my_dic">我的单词本</string>
+    <string name="DAILY_RECOMMEND_API">/dsapi</string>
+    <string name="forget">不记得</string>
+    <string name="remember">记得</string>
+    <string name="review">单词复习</string>
+    <string name="change_review_mode">切换复习模式</string>
+</resources>

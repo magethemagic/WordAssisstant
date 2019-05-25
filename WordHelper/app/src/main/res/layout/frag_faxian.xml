@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lighter_grey"
+    android:orientation="vertical">
+
+    <com.qmuiteam.qmui.widget.QMUITopBarLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <com.qmuiteam.qmui.alpha.QMUIAlphaLinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:orientation="horizontal"
+                android:background="@drawable/shape_round_corner"
+                android:layout_height="36dp">
+                <ImageView
+                    android:paddingStart="10dp"
+                    android:id="@+id/frag_fa_si"
+                    android:src="@mipmap/ic_search_48pt_3x"
+                    android:layout_gravity="center"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp" />
+                <EditText
+                    android:id="@+id/frag_fa_et"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:hint="请输入搜索的单词"
+                    android:background="@null"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:paddingLeft="20dp"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+            </LinearLayout>
+            <com.qmuiteam.qmui.alpha.QMUIAlphaTextView
+                android:id="@+id/topbar_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|end"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text="长句翻译"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </com.qmuiteam.qmui.alpha.QMUIAlphaLinearLayout>
+    </com.qmuiteam.qmui.widget.QMUITopBarLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="搜索历史"
+        android:textSize="15sp" />
+
+    <GridView
+        android:id="@+id/frag_fa_gv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="2"
+        android:layout_margin="10dp" />
+
+    <Button
+        android:id="@+id/frag_fa_clear"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/clear_history"
+        android:text="清空搜索历史"
+        android:textColor="@color/orange"
+        android:textSize="15sp" />
+</LinearLayout>

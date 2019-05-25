@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <com.qmuiteam.qmui.widget.QMUITopBarLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <com.qmuiteam.qmui.alpha.QMUIAlphaImageButton
+            android:id="@+id/topbar_rightbutton"
+            android:background="@drawable/edit_selector"
+            android:layout_gravity="end|center"
+            android:layout_marginEnd="20dp"
+            android:layout_width="22dp"
+            android:layout_height="22dp" />
+    </com.qmuiteam.qmui.widget.QMUITopBarLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/act_danciben_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:dividerHeight="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+
+        <LinearLayout
+                android:id="@+id/act_danciben_edit_linearlayout"
+                android:background="@color/lighter_grey"
+                android:visibility="gone"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp">
+
+                    <CheckBox
+                        android:id="@+id/act_danciben_select_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:text="全选"
+                        android:textColor="#000000"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                    <Button
+                        android:layout_weight="4"
+                        android:id="@+id/act_danciben_removeall"
+                        android:background="@drawable/translate"
+                        android:text="移除全部"
+                        android:textColor="@color/white"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent" />
+
+                    <Button
+                        android:id="@+id/act_danciben_but"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"
+                        android:background="@drawable/translate"
+                        android:text="加入分级"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.qmuiteam.qmui.widget.QMUITopBarLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <com.qmuiteam.qmui.alpha.QMUIAlphaImageButton
+            android:id="@+id/topbar_rightbutton"
+            android:layout_gravity="end|center"
+            android:layout_marginEnd="20dp"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:background="@drawable/add_selector"/>
+    </com.qmuiteam.qmui.widget.QMUITopBarLayout>
+
+    <ListView
+        android:id="@+id/act_plan_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null" />
+
+</LinearLayout>

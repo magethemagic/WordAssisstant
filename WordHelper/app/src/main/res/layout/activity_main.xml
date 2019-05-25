@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/main_vp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <View
+        android:background="#D1D1D1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/act_1_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/act_1_icon"
+            android:layout_width="@dimen/ACTION_ICON_SIZE"
+            android:layout_height="@dimen/ACTION_ICON_SIZE"
+            android:src="@mipmap/ic_bookmark_border_black_48dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/daily_recommend"
+            android:gravity="center"
+            android:id="@+id/act_1_text"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/act_2_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/act_2_icon"
+            android:layout_width="@dimen/ACTION_ICON_SIZE"
+            android:layout_height="@dimen/ACTION_ICON_SIZE"
+            android:src="@mipmap/ic_search_48pt_3x"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/search"
+            android:id="@+id/act_2_text"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/act_3_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="@dimen/ACTION_ICON_SIZE"
+            android:layout_height="@dimen/ACTION_ICON_SIZE"
+            android:id="@+id/act_3_icon"
+            android:src="@mipmap/ic_perm_identity_black_48dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/my_dic"
+            android:id="@+id/act_3_text"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/main_tab"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        app:tabIndicatorColor="@color/blue"
+        android:layout_marginBottom="3dp"/>
+
+</LinearLayout>

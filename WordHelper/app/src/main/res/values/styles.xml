@@ -1,0 +1,15 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="QMUI.Compat">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionBarSize">50dp</item>
+    </style>
+    <dimen name="ACTION_ICON_SIZE">22dp</dimen>
+    <color name="gray">#888888</color>
+    <color name="tianyi_blue">#66ccff</color>
+
+</resources>

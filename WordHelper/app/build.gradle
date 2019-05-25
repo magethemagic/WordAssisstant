@@ -1,0 +1,76 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2' // add plugin
+    }
+}
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.example.wordhelper"
+        minSdkVersion 24
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+    }
+
+    greendao {
+        //数据库schema版本号，迁移等操作会用到
+        schemaVersion 1
+        //通过gradle插件生成的数据库相关文件的包名，默认为你的entity所在的包名
+        daoPackage 'com.example.wordhelper.dao'
+        //这就是我们上面说到的自定义生成数据库文件的目录了，可以将生成的文件放到我们的java目录中，而不是build中，这样就不用额外的设置资源目录了
+        targetGenDir 'src/main/java'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
+
+    implementation'com.squareup.okhttp3:okhttp:3.14.0'
+    implementation'com.squareup.okhttp3:logging-interceptor:3.14.0'
+
+    implementation "io.reactivex.rxjava2:rxjava:2.2.7"
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+    implementation 'org.greenrobot:greendao:3.2.2' // add library
+
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.zhl.cbdialog:CBDialog:1.0.0'
+
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+    implementation 'com.qmuiteam:qmui:1.2.0'
+
+}
+
