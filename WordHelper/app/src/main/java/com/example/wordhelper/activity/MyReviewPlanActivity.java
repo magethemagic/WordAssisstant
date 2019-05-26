@@ -78,12 +78,18 @@ public class MyReviewPlanActivity extends BaseActivity {
             }
 
         });
+        mListView.setOnItemLongClickListener((parent, view, position1, id) -> {
+            mDeleteDialog.show();
+            this.position = position1;
+            return true;
+        });
         setUpData();
     }
 
     private void initTopBar(){
-        mTopBar.setTitle("复习计划").setGravity(Gravity.CENTER);
-        mTopBar.setTitle("复习计划").setTextColor(Color.parseColor("#FFFFFF"));
+        TextView title = mTopBar.setTitle("分级列表");
+        title.setGravity(Gravity.CENTER);
+        title.setTextColor(Color.parseColor("#FFFFFF"));
         mTopBar.addLeftBackImageButton().setOnClickListener(v -> finish());
         mTopBar.setBackgroundColor(Color.parseColor("#05B6F7"));
     }
@@ -106,7 +112,7 @@ public class MyReviewPlanActivity extends BaseActivity {
     private void showDeleteDialog(){
         mDeleteDialog = new CBDialogBuilder(this)
                 .setTouchOutSideCancelable(true)
-                .setTitle("该分级已复习，是否删除？")
+                .setTitle("是否删除该分级？")
                 .showCancelButton(true)
                 .setCancelButtonText("取消")
                 .showConfirmButton(true)
